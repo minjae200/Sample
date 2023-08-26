@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/ba0ae6c82b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="static/css/input.css">
+    <link rel="stylesheet" href="static/css/base.css">
+    <link rel="stylesheet" href="static/css/layout.css">
+    <link rel="stylesheet" href="static/css/draggable.css">
+    <link rel="stylesheet" href="static/css/modal.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-container" id="header-container">
+            <div style="display: flex; align-items: center; margin-left: 20px;">
+                <img src="static/image/uk.png" alt="UK Flag" style="max-width: 80px; margin-right: 5px;">
+                <h1 class="header-title" id="header-title">United Kingdom - Freesat</h1>
+            </div>
+            <div class="network-container">
+                <i class="fa-solid fa-network-wired big-size"></i>
+            </div>
+        </div>
+        <div class="title-container">
+            <div class="hometp-container">
+                <h1 class="hometp-title">HomeTP</h1>
+                <div class="hometp-button-container">
+                    <button id="create-btn" type="button">Create</button>
+                    <button id="clear-btn" type="button">Clear</button>
+                    <button id="change-btn" type="button">Change SO</button>
+                </div>
+            </div>
+            <div class="stream-title-container">
+                <h1 class="stream-title">Stream </h1>
+                <div class="stream-button-container">
+                    <button>Refresh</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="myModal" class="modal-container">
+            <div class="modal">
+                <div id="modal-main">
+                    <div class="modal-header">
+                        <h1> Change SO</h1>
+                    </div>
+                    <div class="modal-content">
+                        <div class="modal-content-item round-edge" onclick="ChangeSO(this)">Freesat</div>
+                        <div class="modal-content-item round-edge" onclick="ChangeSO(this)">Other Operator</div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="closeModalBtn">Close</button>
+                    </div>
+                </div>
+                <div id="modal-progress-container" style="display: none; padding: 20px;">
+                    <h1 id="progress-title"> United Kingdom - Freesat </h1>
+                    <h2 id="progress-subtitle" style="text-align: left; display: inline-block;">Preparing Update</h2>
+                    <h2 id="progress-percent" style="float: right;">0%</h2>
+                    <div class="modal-progress">
+                        <div class="modal-progress-bar" id="progressBar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="transponder-container container-scrollbar" id="transponder-container"></div>
+            <div class="stream-container container-scrollbar" id="stream-container"></div>
+        </div>
+        <div class="footer-container" id="footer-container"></div>
+    </div>
+
+    <script src="static/js/main.js"></script>
+    <script src="static/js/rest.js"></script>
+    <script src="static/js/luna.js"></script>
+</body>
+</html>

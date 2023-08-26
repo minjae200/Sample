@@ -1,0 +1,148 @@
+.container
+{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container .header-container
+{
+    flex: 0;
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-title
+{
+    color: white;
+    padding: 5px 15px;
+    margin: 0;
+    font-size: 40px;
+}
+
+.network-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.fa-solid.big-size {
+    font-size: 35px;
+    color: white;
+}
+
+.container .main-container
+{
+    display: flex;
+    flex: 1;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.container .footer-container
+{
+    display: flex;
+    flex: 0;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.main-container .transponder-container
+{
+    flex: 2;
+    margin: 10px;
+    max-height: 100%;
+}
+
+.main-container .stream-container
+{
+    flex: 1;
+    margin: 10px;
+    padding-left: 10px;
+    max-height: 100%;
+}
+
+
+.container .title-container
+{
+    display: flex;
+    flex: 0;
+    margin-top: 10px;
+}
+
+.title-container .hometp-container
+{
+    display: flex;
+    align-items: flex-end;
+    flex: 2;
+}
+
+.hometp-container .hometp-title
+{
+    display: flex;
+    flex: 1;
+    margin:0px 0px 0px 15px;
+}
+
+.hometp-container .hometp-button-container
+{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 40px;
+    padding-bottom: 5px;
+}
+
+.title-container .stream-title-container
+{
+    display: flex;
+    align-items: flex-end;
+    flex: 1;
+}
+
+.stream-title-container .stream-title
+{
+    display: flex;
+    flex: 1;
+    margin: 0px 0px 0px 15px;
+}
+
+.stream-title-container .stream-button-container
+{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+    padding-bottom: 5px;
+}
+
+button {
+    margin-left: 10px; /* 버튼 사이 간격 조절 */
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.container-scrollbar {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.container-scrollbar::-webkit-scrollbar {
+    width: 10px;
+}
+.container-scrollbar::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar);
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+.container-scrollbar::-webkit-scrollbar-track {
+    background-color: grey;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px white;
+}

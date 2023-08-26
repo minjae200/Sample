@@ -1,0 +1,109 @@
+@import url('https://rsms.me/inter/inter.css');
+
+h1,
+h2,
+h3 {
+	font-weight: 900;
+	color: white;
+}
+
+mark {
+	background: var(--color-accent);
+	color: var(--color-text);
+	font-weight: bold;
+	padding: 0 0.2em;
+}
+
+.card {
+	background: var(--color-background);
+	padding: calc(4 * var(--size-bezel));
+	margin-top: calc(4 * var(--size-bezel));
+	border-radius: var(--size-radius);
+	border: 3px solid var(--color-shadow, currentColor);
+	box-shadow: 0.5rem 0.5rem 0 var(--color-shadow, currentColor);
+}
+
+.card--inverted {
+	--color-background: var(--color-dark);
+	color: var(--color-light);
+	--color-shadow: var(--color-accent);
+	flex: 0 1 calc(50% - 15px);
+	margin-bottom: 13px;
+	margin-top: 6px;
+	margin-left: 5px;
+	box-sizing: border-box;
+}
+
+/* 드래그 중인 input의 테두리 색상을 변경합니다. */
+.input__field.drag-over {
+	border-color: var(--action-color-hover);
+}
+
+.card--accent {
+	--color-background: var(--color-signal);
+	--color-accent: var(--color-light);
+	color: var(--color-dark);
+}
+
+.card *:first-child {
+	margin-top: 0;
+}
+
+.l-design-width {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	gap: 10px;
+}
+
+.input {
+	position: relative;
+}
+
+.input__label {
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: calc(var(--size-bezel) * 0.5) calc(var(--size-bezel) * .5);
+	margin: calc(var(--size-bezel) * 0.75 + 3px) calc(var(--size-bezel) * .5);
+	background: pink;
+	white-space: nowrap;
+	transform: translate(0, 0);
+	transform-origin: 0 0;
+	background: var(--color-background);
+	transition: transform 120ms ease-in;
+	font-weight: bold;
+	line-height: 1.2;
+}
+
+.input__field {
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+	border: 2px solid currentColor;
+	padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+	color: currentColor;
+	background: transparent;
+	border-radius: var(--size-radius);
+}
+
+.input__field:focus+.input__label,
+.input__field:not(:placeholder-shown)+.input__label {
+	transform: translate(0.25rem, -65%) scale(0.8);
+	color: var(--color-accent);
+}
+
+.button-group {
+	margin-top: calc(var(--size-bezel) * 2.5);
+}
+
+.icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	margin-right: 0.5em;
+}
+
+.hidden {
+	display: none;
+}
